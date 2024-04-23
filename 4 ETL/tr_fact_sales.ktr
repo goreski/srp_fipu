@@ -533,7 +533,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <valuename>sales_tk</valuename>
+    <valuename>fact_sales_tk</valuename>
     <use_database>N</use_database>
     <connection>MySQL</connection>
     <schema/>
@@ -1038,13 +1038,13 @@ ORDER BY ss.id ASC
       <schema_name/>
     </partitioning>
     <connection>MySQL</connection>
-    <schema/>
+    <schema>pentaho</schema>
     <table>fact_sales</table>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
     <partitioning_field/>
     <partitioning_daily>N</partitioning_daily>
@@ -1053,8 +1053,40 @@ ORDER BY ss.id ASC
     <tablename_field/>
     <tablename_in_table>Y</tablename_in_table>
     <return_keys>N</return_keys>
-    <return_field/>
+    <return_field>fact_sales_tk</return_field>
     <fields>
+      <field>
+        <column_name>country_id</column_name>
+        <stream_name>country_id</stream_name>
+      </field>
+      <field>
+        <column_name>order_method</column_name>
+        <stream_name>order_method</stream_name>
+      </field>
+      <field>
+        <column_name>retailer_id</column_name>
+        <stream_name>retailer_id</stream_name>
+      </field>
+      <field>
+        <column_name>product_id</column_name>
+        <stream_name>product_id</stream_name>
+      </field>
+      <field>
+        <column_name>date_id</column_name>
+        <stream_name>date_id</stream_name>
+      </field>
+      <field>
+        <column_name>revenue</column_name>
+        <stream_name>revenue</stream_name>
+      </field>
+      <field>
+        <column_name>quantity</column_name>
+        <stream_name>quantity</stream_name>
+      </field>
+      <field>
+        <column_name>fact_sales_tk</column_name>
+        <stream_name>fact_sales_tk</stream_name>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>

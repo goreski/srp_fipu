@@ -50,13 +50,18 @@ CREATE INDEX idx_dim_retailer_tk ON pentaho.dim_retailer(retailer_tk);
 -- Tablica činjenica
 CREATE TABLE pentaho.fact_sales
 (
-  country_id BIGINT
+  fact_sales_tk BIGINT NOT NULL PRIMARY KEY
+,  country_id BIGINT
 , order_method TINYTEXT
 , retailer_id BIGINT
 , product_id BIGINT
-, date_id BIGINT
+, date_id INT
 , revenue DOUBLE
 , quantity BIGINT
 , sales_tk INT
+, FOREIGN KEY (country_id) REFERENCES pentaho.dim_country(country_tk)
+, FOREIGN KEY (retailer_id) REFERENCES pentaho.dim_retailer(retailer_tk)
+, FOREIGN KEY (product_id) REFERENCES pentaho.dim_product(product_tk)
+, FOREIGN KEY (date_id) REFERENCES pentaho.dim_date(date_tk)
 );
 
