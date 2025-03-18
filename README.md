@@ -2,8 +2,7 @@
 
 Fakultet informatike u Puli
 
-Dobrodošli u repozitorij **Case study: Oprema d.d.**, koji prati izradu skladišta podataka u okviru kolegija. 
-Ovaj repozitorij sadrži sve potrebne podatke i kod za implementaciju skladišta podataka.
+Dobrodošli u repozitorij **Case study: Oprema d.d.**, koji prati izradu skladišta podataka u okviru kolegija. Ovaj repozitorij sadrži sve potrebne podatke i kod za implementaciju skladišta podataka.
 
 ---
 
