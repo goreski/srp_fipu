@@ -13,7 +13,7 @@ Projekt koristi sljedeće tehnologije:
 - **Lucidchart** - Vizualizacija modela podataka
 - **Python** - Programski jezik za obradu podataka
 - **Apache Spark** - Distribuirana obrada podataka
-- **Tableau** - Alat za vizualizaciju podataka
+- **Tableau, PowerBI** - Alat za vizualizaciju podataka
 
 Studenti mogu prilagoditi tehnologije i alate prema svojim potrebama.
 
@@ -31,7 +31,7 @@ Svaka faza sadrži odgovarajuće skripte, SQL upite koji su također numerirani 
 
 ---
 ## ⚙️ Instalacija i Pokretanje
-Prije pokretanja projekta preporučuje se korištenje **Python virtualnog okruženja**. Slijedite ove korake:
+Preporučuje se korištenje **Python virtualnog okruženja**. Slijedite ove korake:
 
 1️⃣ Kreirajte virtualno okruženje:
 ```sh
