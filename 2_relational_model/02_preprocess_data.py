@@ -1,7 +1,7 @@
 import pandas as pd
 
 """
-2s. Skripta za predprocesiranje skupa podataka
+2. Skripta za predprocesiranje skupa podataka
 
 Predprocesiranje ovisi o skupu podataka. Potrebno je prilagoditi skriptu za vlastiti skup.
 Checkpoint 1 je obuhvaćao pronalazak skupa podataka i analizu. Ovdje je potrebno napraviti predprocesiranje na temelju analize.
