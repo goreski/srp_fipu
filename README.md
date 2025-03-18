@@ -1,4 +1,4 @@
-# 📊 Projekt Skladišta i rudarenje podataka
+# 📊 Skladišta i rudarenje podataka - Projekt
 
 Fakultet informatike u Puli
 
