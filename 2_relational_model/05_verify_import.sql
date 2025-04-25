@@ -2,6 +2,8 @@
 Output selecta mora u potpunosti odgovarati csv podacima iz datoteke
 */
 
+use dw;
+
 SELECT cy.name 'retailer_country'
 , od.name 'order_method_type'
 , re.name 'retailer_type'

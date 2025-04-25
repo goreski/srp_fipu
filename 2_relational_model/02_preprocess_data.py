@@ -23,6 +23,10 @@ df.columns = df.columns.str.replace(' ', '_') # Zamjena razmaka u nazivima stupa
 print("CSV size after: ", df.shape) # Ispis broja redaka i stupaca nakon predprocesiranja
 print(df.head()) # Ispis prvih redaka dataframe-a
 
+# Count if there are duplicates
+duplicates = df.duplicated().sum()
+print(f"Number of duplicates: {duplicates}") # Ispis broja duplikata
+
 # Random dijeljenje skupa podataka na dva dijela 80:20 (trebat će nam kasnije)
 df20 = df.sample(frac=0.2, random_state=1)
 df = df.drop(df20.index)

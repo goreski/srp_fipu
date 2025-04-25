@@ -29,7 +29,8 @@ class DimCountry(Base):
     date_from = Column(DateTime)
     date_to = Column(DateTime)
     country_id = Column(Integer, index=True)
-    country = Column(String(45))
+    name = Column(String(45))
+    population = Column(Integer)
     region = Column(String(45))
 
 
@@ -42,9 +43,9 @@ class DimProduct(Base):
     date_from = Column(DateTime)
     date_to = Column(DateTime)
     product_id = Column(Integer, index=True)
-    product_name = Column(String(33))
-    product_type_name = Column(String(20))
-    product_line_name = Column(String(20))
+    product_name = Column(String(256))
+    product_type_name = Column(String(256))
+    product_line_name = Column(String(256))
 
 
 class DimRetailer(Base):
@@ -56,7 +57,8 @@ class DimRetailer(Base):
     date_from = Column(DateTime)
     date_to = Column(DateTime)
     retailer_id = Column(Integer, index=True)
-    name = Column(String(45))
+    name = Column(String(256))
+    speciality_store = Column(Integer)
 
 class DimDate(Base):
     __tablename__ = 'dim_date'
@@ -72,14 +74,13 @@ class FactSales(Base):
     __table_args__ = {'schema': 'dw'}
 
     fact_sales_tk = Column(BigInteger, primary_key=True)
-    country_id = Column(BigInteger, ForeignKey('dw.dim_country.country_tk'))
+    country_tk = Column(BigInteger, ForeignKey('dw.dim_country.country_tk'))
     order_method = Column(String(255))  # TINYTEXT converted to VARCHAR(255)
-    retailer_id = Column(BigInteger, ForeignKey('dw.dim_retailer.retailer_tk'))
-    product_id = Column(BigInteger, ForeignKey('dw.dim_product.product_tk'))
-    date_id = Column(Integer, ForeignKey('dw.dim_date.date_tk'))
+    retailer_tk = Column(BigInteger, ForeignKey('dw.dim_retailer.retailer_tk'))
+    product_tk = Column(BigInteger, ForeignKey('dw.dim_product.product_tk'))
+    date_tk = Column(Integer, ForeignKey('dw.dim_date.date_tk'))
     revenue = Column(Float)
     quantity = Column(BigInteger)
-    sales_tk = Column(Integer)
 
 # Create Tables in the Database
 Base.metadata.create_all(engine)
